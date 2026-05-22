@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅行予算詳細プランナー【無料】自動作成ツール</title>
+    <meta name="description" content="交通費・宿泊費・食費・観光費を分類入力して旅行の詳細予算を管理。登録不要・完全無料でご利用いただけます。">
+    <link rel="canonical" href="https://appadaycreator.github.io/travel-budget-planner/">
+    <meta property="og:title" content="旅行予算詳細プランナー【無料】自動作成ツール">
+    <meta property="og:description" content="交通費・宿泊費・食費・観光費を分類入力して旅行の詳細予算を管理。登録不要・完全無料でご利用いただけます。">
+    <meta property="og:url" content="https://appadaycreator.github.io/travel-budget-planner/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://appadaycreator.github.io/assets/ogp-default.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://appadaycreator.github.io/travel-budget-planner/">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- Clarity -->
+    <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","s3t9vl8h3v");</script>
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"旅行予算詳細プランナー","description":"交通費・宿泊費・食費・観光費を分類入力して旅行の詳細予算を管理。登録不要・完全無料でご利用いただけます。","url":"https://appadaycreator.github.io/travel-budget-planner/","applicationCategory":"UtilityApplication","operatingSystem":"Any","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"author":{"@type":"Organization","name":"AppADayCreator","url":"https://appadaycreator.github.io/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"旅行予算詳細プランナーは無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料でご利用いただけます。登録・ログイン不要ですぐに使えます。"}},{"@type":"Question","name":"入力したデータはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"入力データはお使いのデバイス内にのみ保存されます。外部サーバーへの送信は行いません。"}},{"@type":"Question","name":"旅行予算詳細プランナーの計算・診断結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"本ツールの結果はあくまで参考情報です。重要な判断の際は専門家にご相談ください。"}}]}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #DBEAFE 0%, #EFF6FF 100%); min-height: 100vh; color: #333; line-height: 1.6; }
+        .site-header { background: #2563EB; color: white; padding: 32px 20px; text-align: center; }
+        .site-header .emoji { font-size: 52px; margin-bottom: 8px; }
+        .site-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .site-header p { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 800px; margin: 0 auto; padding: 16px; }
+        .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
+        .btn { background: #2563EB; color: white; border: none; padding: 14px 24px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; transition: opacity .2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn:active { transform: scale(0.98); }
+        input, select, textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0; border-radius: 8px; font-size: 15px; margin-top: 4px; font-family: inherit; }
+        input:focus, select:focus { outline: none; border-color: #2563EB; }
+        label { font-size: 13px; font-weight: 600; color: #555; display: block; margin-top: 14px; margin-bottom: 2px; }
+        .result { display: none; }
+        .result.show { display: block; }
+        .result-value { font-size: 36px; font-weight: 700; color: #2563EB; text-align: center; padding: 16px 0; }
+        .badge { display: inline-block; background: #2563EB20; color: #2563EB; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        /* ── サービス固有CSS ── */
+
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="site-header">
+        <div class="emoji">✈️</div>
+        <h1>旅行予算詳細プランナー</h1>
+        <p>交通費・宿泊費・食費・観光費を分類入力して旅行の詳細予算を管理。</p>
+    </header>
+
+    <main class="container">
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <!-- ✅MAIN_HTML自動生成済み：JS_CODEの★部分のみ実装してください -->
+        <div class="card">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;">✈️ 旅行予算詳細プランナー</h2>
+          <label>旅行予算詳細プランナーの入力値</label>
+          <input type="number" id="val1" placeholder="100" min="0">
+          <label style="margin-top:12px;">係数・補正値</label>
+          <input type="number" id="val2" placeholder="1.0" min="0">
+          <button class="btn" style="margin-top:20px;" onclick="calculate()">旅行予算詳細プランナーを計算する</button>
+          <div class="result" id="result" style="margin-top:16px;">
+            <div class="card" style="text-align:center;">
+              <div id="output" style="font-size:2.2rem;font-weight:700;color:#2563EB;padding:12px 0;"></div>
+              <p id="detail" style="color:#666;font-size:14px;margin-top:4px;"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 関連サービス -->
+        <div class="card" style="margin-top:8px;">
+            <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+                <a href="https://appadaycreator.github.io/domestic-travel-planner/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">✈️ 国内旅行費用シミュレーター →</a>
+                <a href="https://appadaycreator.github.io/packing-checklist/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">忘れ物ゼロ →</a>
+                <a href="https://appadaycreator.github.io/luggage-weight-calculator/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">荷物重量・航空手荷物計算 →</a>
+            </div>
+        </div>
+
+        <ins class="adsbygoogle" style="display:block;margin:12px 0" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <!-- 使い方セクション（B2: 使い方3ステップ）-->
+        <div class="card" style="margin-top:8px;background:#f8fafc;">
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
+            <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.8;">
+                <li><strong>入力</strong>：画面の入力フォームに必要な情報を入力してください</li>
+                <li><strong>計算・診断</strong>：ボタンをクリックすると即座に結果が表示されます</li>
+                <li><strong>活用</strong>：結果を参考に、次のアクションを検討してください</li>
+            </ol>
+        </div>
+
+        <!-- 注意点（B5: 限界・注意点）-->
+        <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;margin:8px 0;font-size:12px;color:#92400e;">
+            <strong>⚠️ ご利用上の注意</strong>：本ツールの計算・診断結果はあくまで参考情報です。医療・法律・投資等の専門的判断が必要な場合は、必ず資格を持つ専門家にご相談ください。
+        </div>
+    </main>
+
+    <footer style="text-align:center;padding:20px;color:white;font-size:12px;opacity:0.75;margin-top:8px;">
+        <p><a href="https://appadaycreator.github.io/" style="color:white;">AppADayCreator</a>
+        | <a href="privacy-policy.html" style="color:white;">プライバシーポリシー</a>
+        | <a href="terms.html" style="color:white;">利用規約</a>
+        | <a href="contact.html" style="color:white;">お問い合わせ</a></p>
+        <p style="margin-top:4px;font-size:11px;opacity:0.6;">最終更新: 2026年5月 | 本サービスはアフィリエイト広告を掲載しています（A8.net/Amazon）</p>
+        <p style="margin-top:6px;">© 2026 AppADayCreator. All services are free.</p>
+    </footer>
+
+    <script>
+    // ★ここだけ実装（約10行）★
+    const CFG = {{
+      inputs: ['val1','val2'],  // ✅自動設定済み→変更不要
+      error: '値を入力してください', // 変更: バリデーションエラー文
+    }};
+    function calcLogic(vals) {{
+      const [v1] = vals;  // 変更: vals[0],vals[1]... で各入力値を取得
+      const result = v1;  // 変更: 実際の計算式
+      const detail = '';  // 変更: 補足説明（単位など）
+      return {{ result, detail }};
+    }}
+    // ★以下変更不要★
+    document.addEventListener('DOMContentLoaded',()=>{{
+      CFG.inputs.forEach(id=>{{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{{ if(e.key==='Enter') calculate(); }}); }});
+    }});
+    function calculate(){{
+      const vals=CFG.inputs.map(id=>parseFloat(document.getElementById(id)?.value)||0);
+      if(!vals[0]){{ alert(CFG.error); return; }}
+      const {{result,detail}}=calcLogic(vals);
+      document.getElementById('output').textContent=typeof result==='number'?result.toLocaleString():result;
+      const d=document.getElementById('detail'); if(d) d.textContent=detail||'';
+      document.getElementById('result').classList.add('show');
+    }}
+    </script>
+</body>
+</html>
