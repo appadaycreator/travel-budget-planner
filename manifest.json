@@ -3,7 +3,7 @@
   "short_name": "travel-budge",
   "start_url": "/travel-budget-planner/",
   "display": "standalone",
-  "background_color": "#6366f1",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "scope": "/travel-budget-planner/"
 }
