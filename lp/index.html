@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-TXQGZRF9");</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>旅行予算計算・シミュレーター｜自動で交通・宿泊・食費・観光費を配分【無料】</title>
+<meta name="description" content="旅行の予算を自動計算。目的地・人数・日数を入力するだけで交通費・宿泊費・食費・観光費が最適配分される無料シミュレーター。国内旅行・海外旅行対応。">
+<meta property="og:title" content="旅行予算計算・シミュレーター｜無料自動計算ツール">
+<meta property="og:description" content="旅行の予算を自動計算。完全無料・登録不要でご利用いただけます。">
+<meta property="og:url" content="https://appadaycreator.com/travel-budget-planner/lp/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://appadaycreator.com/travel-budget-planner/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://appadaycreator.com/travel-budget-planner/lp/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter','Noto Sans JP',sans-serif;background:#fff;color:#1f2937;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+
+/* ===== HEADER ===== */
+.lp-header{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid #e5e7eb;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.lp-header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px}
+.lp-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px;color:#1e3a5f;white-space:nowrap}
+.lp-logo .icon{font-size:22px}
+.lp-nav{display:flex;align-items:center;gap:32px}
+.lp-nav a{color:#4b5563;font-size:14px;font-weight:500;transition:color .2s}
+.lp-nav a:hover{color:#3b82f6}
+.lp-header-cta{background:#10b981;color:#fff;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:700;transition:all .2s;white-space:nowrap}
+.lp-header-cta:hover{background:#059669;box-shadow:0 4px 12px rgba(16,185,129,.3)}
+
+/* ===== HERO ===== */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:640px;overflow:hidden}
+.hero-photo{position:relative;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(15,23,42,.08) 0%,transparent 60%)}
+.hero-content{background:linear-gradient(150deg,#eff6ff 0%,#dbeafe 50%,#e0f2fe 100%);display:flex;flex-direction:column;justify-content:center;padding:56px 48px 56px 40px;position:relative}
+.hero-content::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(59,130,246,.12) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#3b82f6;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;border:1.5px solid #bfdbfe;margin-bottom:20px;width:fit-content;box-shadow:0 2px 8px rgba(59,130,246,.1)}
+.hero-title{font-size:44px;font-weight:900;line-height:1.15;margin-bottom:14px;color:#1e3a5f;letter-spacing:-0.5px}
+.hero-title .accent{color:#3b82f6;display:block;font-size:48px}
+.hero-subtitle{font-size:14px;color:#4b5563;line-height:1.85;margin-bottom:24px}
+.hero-widget{background:#fff;border-radius:16px;padding:18px 20px;box-shadow:0 8px 32px rgba(59,130,246,.14),0 2px 8px rgba(0,0,0,.06);margin-bottom:24px;border:1px solid #e0f2fe}
+.hero-widget-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
+.hw-label{font-size:11px;color:#6b7280;font-weight:600;background:#f0f9ff;padding:3px 10px;border-radius:10px}
+.hw-amount-wrap{text-align:right}
+.hw-amount{font-size:26px;font-weight:900;color:#1e3a5f;line-height:1}
+.hw-per{font-size:11px;color:#10b981;font-weight:700;margin-top:3px}
+.hw-bars{display:flex;flex-direction:column;gap:7px}
+.hw-bar{display:flex;align-items:center;gap:8px;font-size:11px}
+.hw-bar-name{width:44px;color:#6b7280;font-weight:600;flex-shrink:0;font-size:10px}
+.hw-bar-track{flex:1;height:7px;background:#f3f4f6;border-radius:4px;overflow:hidden}
+.hw-bar-fill{height:100%;border-radius:4px;transition:width .6s}
+.hw-bar-val{width:74px;text-align:right;color:#374151;font-weight:700;font-size:10px}
+.hero-cta{display:block;background:#10b981;color:#fff;padding:15px 32px;border-radius:12px;font-size:17px;font-weight:700;text-align:center;transition:all .2s;box-shadow:0 4px 16px rgba(16,185,129,.3);margin-bottom:18px}
+.hero-cta:hover{background:#059669;transform:translateY(-2px);box-shadow:0 8px 24px rgba(16,185,129,.4)}
+.hero-stats{display:flex;gap:0;border-top:1px solid #e5e7eb;padding-top:16px}
+.hero-stat{flex:1;text-align:center;padding:0 8px;border-right:1px solid #e5e7eb}
+.hero-stat:last-child{border-right:none}
+.hero-stat .num{font-size:18px;font-weight:800;color:#3b82f6}
+.hero-stat .lbl{font-size:10px;color:#6b7280;font-weight:500}
+
+/* ===== COMMON SECTION ===== */
+section{padding:80px 24px}
+.sec-inner{max-width:1200px;margin:0 auto}
+.sec-tag{display:inline-block;background:#eff6ff;color:#3b82f6;font-size:12px;font-weight:700;padding:4px 14px;border-radius:20px;margin-bottom:12px}
+.sec-title{font-size:30px;font-weight:800;color:#1e3a5f;margin-bottom:8px;line-height:1.25}
+.sec-sub{font-size:14px;color:#6b7280;margin-bottom:44px;line-height:1.7}
+.sec-head{text-align:center;margin-bottom:44px}
+
+/* ===== WORRY SECTION ===== */
+.worry-sec{background:#eff6ff}
+.worry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.worry-card{background:#fff;border-radius:18px;padding:28px 20px;text-align:center;box-shadow:0 2px 16px rgba(59,130,246,.08);transition:transform .2s}
+.worry-card:hover{transform:translateY(-3px)}
+.worry-photo{width:88px;height:88px;border-radius:50%;object-fit:cover;margin:0 auto 14px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.worry-icon{width:64px;height:64px;border-radius:50%;background:#eff6ff;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px}
+.worry-card p{font-size:13px;color:#4b5563;line-height:1.75;font-weight:500}
+.worry-card strong{color:#1e3a5f;font-weight:700}
+
+/* ===== FEATURES ===== */
+.feat-sec{background:#fff}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat-card{background:#f8fafc;border-radius:18px;padding:28px 24px;border:1px solid #e5e7eb;transition:all .2s;display:flex;gap:16px;align-items:flex-start}
+.feat-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(59,130,246,.1);border-color:#bfdbfe}
+.feat-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#dbeafe);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.feat-card h3{font-size:14px;font-weight:700;color:#1e3a5f;margin-bottom:7px}
+.feat-card p{font-size:12px;color:#6b7280;line-height:1.75}
+
+/* ===== STEPS ===== */
+.steps-sec{background:#f8fafc}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:100px;left:calc(33.33% + 14px);right:calc(33.33% + 14px);height:2px;background:linear-gradient(to right,#3b82f6,#10b981);z-index:0;display:none}
+.step-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07);position:relative}
+.step-photo{height:200px;overflow:hidden}
+.step-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.step-card:hover .step-photo img{transform:scale(1.04)}
+.step-content{padding:24px}
+.step-num{width:36px;height:36px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:12px;box-shadow:0 4px 12px rgba(59,130,246,.3)}
+.step-card h3{font-size:16px;font-weight:700;color:#1e3a5f;margin-bottom:8px}
+.step-card p{font-size:13px;color:#6b7280;line-height:1.75}
+.step-arrow{display:flex;align-items:center;justify-content:center;font-size:28px;color:#3b82f6;padding-top:80px}
+
+/* ===== BUDGET EXAMPLE ===== */
+.budget-sec{background:#fff}
+.budget-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.budget-text h2{font-size:28px;font-weight:800;color:#1e3a5f;margin-bottom:14px;line-height:1.3}
+.budget-text p{font-size:13px;color:#4b5563;line-height:1.85;margin-bottom:20px}
+.style-cards{display:flex;flex-direction:column;gap:12px}
+.style-card{display:flex;align-items:center;gap:14px;background:#f8fafc;border-radius:14px;padding:14px 16px;border:1px solid #e5e7eb;transition:all .2s}
+.style-card:hover{border-color:#bfdbfe;background:#eff6ff}
+.style-card img{width:60px;height:60px;border-radius:12px;object-fit:cover}
+.style-card .sc-label{font-size:12px;font-weight:600;color:#6b7280}
+.style-card .sc-price{font-size:20px;font-weight:800;color:#3b82f6}
+.budget-visual{background:linear-gradient(145deg,#f8fafc,#eff6ff);border-radius:24px;padding:32px;border:1px solid #dbeafe}
+.bv-title{font-size:13px;font-weight:700;color:#1e3a5f;margin-bottom:20px}
+.bv-bar{margin-bottom:16px}
+.bv-bar-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-bottom:6px}
+.bv-bar-head span{color:#4b5563;font-weight:600}
+.bv-bar-head strong{color:#1f2937;font-weight:700}
+.bv-bar-track{height:12px;background:#e5e7eb;border-radius:6px;overflow:hidden}
+.bv-bar-fill{height:100%;border-radius:6px}
+.bv-total{border-top:2px solid #dbeafe;margin-top:20px;padding-top:16px;display:flex;justify-content:space-between;align-items:center}
+.bv-total span{font-size:14px;font-weight:700;color:#1e3a5f}
+.bv-total strong{font-size:26px;font-weight:900;color:#3b82f6}
+.bv-per{text-align:center;color:#10b981;font-size:12px;font-weight:700;margin-top:6px}
+
+/* ===== COMPARISON ===== */
+.cmp-sec{background:#eff6ff}
+.cmp-table-wrap{overflow-x:auto;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,.07)}
+.cmp-table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;min-width:560px}
+.cmp-table thead tr th{padding:16px 20px;text-align:center;font-size:13px;font-weight:700;border-bottom:2px solid #f3f4f6}
+.cmp-table thead tr th:first-child{text-align:left;background:#f8fafc;color:#6b7280;font-size:12px}
+.cmp-table th.ours{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff}
+.cmp-table th.other{background:#f8fafc;color:#9ca3af}
+.cmp-table td{padding:13px 20px;font-size:13px;text-align:center;border-top:1px solid #f3f4f6}
+.cmp-table td:first-child{text-align:left;font-weight:600;color:#374151}
+.cmp-table tr:hover td{background:#f9fafb}
+.ok{color:#10b981;font-size:20px;font-weight:800}
+.ok2{color:#f59e0b;font-size:17px;font-weight:700}
+.ng{color:#d1d5db;font-size:20px}
+
+/* ===== USE CASES ===== */
+.uc-sec{background:#fff}
+.uc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:20px}
+.uc-card{position:relative;border-radius:18px;overflow:hidden;height:220px;box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.uc-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.uc-card:hover img{transform:scale(1.05)}
+.uc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,.75) 0%,rgba(15,23,42,.1) 60%,transparent 100%)}
+.uc-tag{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.3)}
+.uc-label{position:absolute;bottom:14px;left:14px;color:#fff;font-weight:700;font-size:15px}
+.uc-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.uc-gallery img{width:100%;height:140px;object-fit:cover;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+
+/* ===== TESTIMONIALS ===== */
+.tst-sec{background:#f8fafc}
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tst-card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid #f3f4f6;transition:transform .2s}
+.tst-card:hover{transform:translateY(-3px)}
+.tst-stars{color:#f59e0b;font-size:16px;letter-spacing:2px;margin-bottom:12px}
+.tst-text{font-size:13px;color:#4b5563;line-height:1.85;margin-bottom:18px}
+.tst-user{display:flex;align-items:center;gap:12px}
+.tst-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid #e5e7eb}
+.tst-name{font-size:13px;font-weight:700;color:#1f2937}
+.tst-detail{font-size:11px;color:#9ca3af;margin-top:2px}
+
+/* ===== CTA SECTION ===== */
+.cta-sec{background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 50%,#2563eb 100%);padding:96px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-sec::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%)}
+.cta-sec::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(16,185,129,.15) 0%,transparent 70%)}
+.cta-sec h2{font-size:34px;font-weight:800;color:#fff;margin-bottom:12px;position:relative;z-index:1}
+.cta-sec p{font-size:16px;color:#bfdbfe;margin-bottom:36px;position:relative;z-index:1}
+.cta-btn-main{display:inline-block;background:#10b981;color:#fff;padding:18px 60px;border-radius:14px;font-size:18px;font-weight:700;transition:all .2s;box-shadow:0 6px 24px rgba(16,185,129,.4);position:relative;z-index:1}
+.cta-btn-main:hover{background:#059669;transform:translateY(-3px);box-shadow:0 12px 32px rgba(16,185,129,.5)}
+.cta-trust{margin-top:20px;font-size:13px;color:#93c5fd;position:relative;z-index:1}
+
+/* ===== FOOTER ===== */
+.lp-footer{background:#1f2937;color:#9ca3af;padding:48px 24px 32px}
+.lp-footer-inner{max-width:1200px;margin:0 auto}
+.lp-footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap;gap:24px}
+.lp-footer-logo{font-size:16px;font-weight:700;color:#fff}
+.lp-footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.lp-footer-links a{color:#9ca3af;font-size:13px;transition:color .2s}
+.lp-footer-links a:hover{color:#fff}
+.lp-footer-bottom{border-top:1px solid #374151;padding-top:20px;text-align:center;font-size:12px}
+
+/* ===== AFFILIATE preserved area ===== */
+.aff-strip{background:#fff;border-top:1px solid #f3f4f6;padding:16px 24px;text-align:center}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1023px){
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .uc-grid{grid-template-columns:repeat(2,1fr)}
+  .tst-grid{grid-template-columns:1fr}
+  .budget-inner{grid-template-columns:1fr}
+}
+@media(max-width:767px){
+  .hero{grid-template-columns:1fr}
+  .hero-photo{height:260px}
+  .hero-content{padding:32px 20px}
+  .hero-title{font-size:30px}
+  .hero-title .accent{font-size:34px}
+  .lp-nav{display:none}
+  .sec-title{font-size:22px}
+  .steps-grid{grid-template-columns:1fr}
+  .worry-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-grid{grid-template-columns:1fr}
+  .uc-grid{grid-template-columns:1fr 1fr}
+  .uc-gallery{grid-template-columns:1fr 1fr}
+  .cmp-table th.other:last-child{display:none}
+  .cmp-table td:last-child{display:none}
+  .cta-sec h2{font-size:24px}
+  .cta-btn-main{padding:15px 36px;font-size:16px}
+}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ===== HEADER ===== -->
+<header class="lp-header">
+  <div class="lp-header-inner">
+    <a href="../" class="lp-logo">
+      <span class="icon">✈️</span>
+      旅行予算詳細プランナー
+    </a>
+    <nav class="lp-nav">
+      <a href="#features">特徴</a>
+      <a href="#steps">使い方</a>
+      <a href="#comparison">比較</a>
+      <a href="#testimonials">口コミ</a>
+    </nav>
+    <a href="../" class="lp-header-cta">今すぐ計算する →</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-photo">
+    <img src="../assets/photos/photo_01.jpg" alt="旅行を楽しむ人たち">
+  </div>
+  <div class="hero-content">
+    <span class="hero-badge">✈️ 旅行費の自動計算ツール</span>
+    <h1 class="hero-title">
+      旅行予算を
+      <span class="accent">かんたん自動計算</span>
+    </h1>
+    <p class="hero-subtitle">
+      目的地・人数・日数を入力するだけで<br>
+      交通費・宿泊費・食費・観光費を自動配分。<br>
+      完全無料・登録不要でご利用いただけます。
+    </p>
+    <div class="hero-widget">
+      <div class="hero-widget-header">
+        <span class="hw-label">🧮 シミュレーション例（3人・沖縄5日）</span>
+        <div class="hw-amount-wrap">
+          <div class="hw-amount">¥428,700</div>
+          <div class="hw-per">1人あたり ¥142,900</div>
+        </div>
+      </div>
+      <div class="hw-bars">
+        <div class="hw-bar">
+          <span class="hw-bar-name">交通費</span>
+          <div class="hw-bar-track"><div class="hw-bar-fill" style="width:40%;background:#3b82f6"></div></div>
+          <span class="hw-bar-val">¥171,480</span>
+        </div>
+        <div class="hw-bar">
+          <span class="hw-bar-name">宿泊費</span>
+          <div class="hw-bar-track"><div class="hw-bar-fill" style="width:35%;background:#10b981"></div></div>
+          <span class="hw-bar-val">¥150,045</span>
+        </div>
+        <div class="hw-bar">
+          <span class="hw-bar-name">食費</span>
+          <div class="hw-bar-track"><div class="hw-bar-fill" style="width:15%;background:#f59e0b"></div></div>
+          <span class="hw-bar-val">¥64,305</span>
+        </div>
+        <div class="hw-bar">
+          <span class="hw-bar-name">観光費</span>
+          <div class="hw-bar-track"><div class="hw-bar-fill" style="width:10%;background:#ef4444"></div></div>
+          <span class="hw-bar-val">¥42,870</span>
+        </div>
+      </div>
+    </div>
+    <a href="../" class="hero-cta">今すぐ無料で計算する →</a>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">20万+</div><div class="lbl">ご利用者数</div></div>
+      <div class="hero-stat"><div class="num">98%</div><div class="lbl">満足度</div></div>
+      <div class="hero-stat"><div class="num">無料</div><div class="lbl">完全無料</div></div>
+      <div class="hero-stat"><div class="num">不要</div><div class="lbl">登録不要</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="worry-sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <span class="sec-tag">こんなお悩みありませんか？</span>
+      <h2 class="sec-title">旅行予算に困っていませんか？</h2>
+      <p class="sec-sub">多くの方が旅行費用の計画に悩んでいます。旅行予算詳細プランナーがすべて解決します。</p>
+    </div>
+    <div class="worry-grid">
+      <div class="worry-card">
+        <img class="worry-photo" src="../assets/photos/photo_09.jpg" alt="">
+        <p><strong>旅行費用の見積もりが<br>難しい…</strong><br><br>交通費や宿泊費の相場がわからず、予算オーバーになりがち</p>
+      </div>
+      <div class="worry-card">
+        <img class="worry-photo" src="../assets/photos/photo_10.jpg" alt="">
+        <p><strong>グループ旅行の<br>割り勘が大変…</strong><br><br>人数が多いほど計算が複雑で、幹事の負担が増す</p>
+      </div>
+      <div class="worry-card">
+        <img class="worry-photo" src="../assets/photos/photo_11.jpg" alt="">
+        <p><strong>プラン変更時の<br>予算変動がわからない…</strong><br><br>ホテルを変えたら全体でいくらになるか即座に把握できない</p>
+      </div>
+      <div class="worry-card">
+        <img class="worry-photo" src="../assets/photos/photo_12.jpg" alt="">
+        <p><strong>どこで節約できるか<br>わからない…</strong><br><br>カテゴリ別の費用を把握していないため、削れる部分が見えない</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="feat-sec" id="features">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <span class="sec-tag">旅行予算詳細プランナーの特徴</span>
+      <h2 class="sec-title">便利な機能が充実</h2>
+      <p class="sec-sub">旅行計画に必要なすべての機能を、無料で提供しています。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><img src="../assets/icons/split/02-07.png" alt="グループ" style="width:34px;height:34px;object-fit:contain;"></div>
+        <div>
+          <h3>グループ割り勘自動計算</h3>
+          <p>複数人での旅行費用を自動で均等割り。1人あたりの負担額も瞬時に算出し、幹事の手間をゼロにします。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><img src="../assets/icons/split/02-05.png" alt="通貨" style="width:34px;height:34px;object-fit:contain;"></div>
+        <div>
+          <h3>複数通貨・為替対応</h3>
+          <p>USD・EUR・THBなど主要通貨に対応。海外旅行でも現地通貨と日本円を同時に管理できます。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><img src="../assets/icons/split/02-06.png" alt="カレンダー" style="width:34px;height:34px;object-fit:contain;"></div>
+        <div>
+          <h3>日別内訳・日程カレンダー</h3>
+          <p>旅行の日程ごとに費用を細かく管理。旅行中の支出も日別・カテゴリ別にリアルタイム追跡。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><img src="../assets/icons/split/03-04.png" alt="シェア" style="width:34px;height:34px;object-fit:contain;"></div>
+        <div>
+          <h3>SNSシェア機能</h3>
+          <p>計算結果をX（旧Twitter）・LINE・Facebook でワンタップシェア。旅行仲間と予算を共有できます。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><img src="../assets/icons/split/02-02.png" alt="グラフ" style="width:34px;height:34px;object-fit:contain;"></div>
+        <div>
+          <h3>複数プラン比較・保存</h3>
+          <p>バックパッカー・標準・ラグジュアリーなど複数パターンを一括比較。最適な旅行プランを見つけられます。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><img src="../assets/icons/split/03-02.png" alt="スマートフォン" style="width:34px;height:34px;object-fit:contain;"></div>
+        <div>
+          <h3>モバイル完全対応</h3>
+          <p>スマホ・タブレットでも完璧に動作。旅先でリアルタイムに予算を確認・修正できます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section class="steps-sec" id="steps">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <span class="sec-tag">使い方</span>
+      <h2 class="sec-title">使い方かんたん3ステップ</h2>
+      <p class="sec-sub">わずか3ステップで、あなたの旅行予算が完成します。</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="../assets/photos/photo_02.jpg" alt="旅行情報を入力するイメージ">
+        </div>
+        <div class="step-content">
+          <div class="step-num">1</div>
+          <h3>旅行情報を入力</h3>
+          <p>交通費・宿泊費・食費・観光費を入力します。プリセット（国内1泊2日・海外5日間・高級旅行）を使えばさらに簡単です。</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="../assets/photos/photo_03.jpg" alt="自動計算のイメージ">
+        </div>
+        <div class="step-content">
+          <div class="step-num">2</div>
+          <h3>自動計算・配分</h3>
+          <p>「今すぐ計算する」を押すだけで、合計金額・カテゴリ別内訳・円グラフが即座に表示されます。</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="../assets/photos/photo_04.jpg" alt="予算プランを確認するイメージ">
+        </div>
+        <div class="step-content">
+          <div class="step-num">3</div>
+          <h3>予算プランを確認・共有</h3>
+          <p>グラフで内訳を確認し、シェア・印刷・CSVで旅行仲間と共有。複数パターンを比較して最適プランを決定。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUDGET EXAMPLE ===== -->
+<section class="budget-sec">
+  <div class="sec-inner">
+    <div class="budget-inner">
+      <div class="budget-text">
+        <span class="sec-tag">予算シミュレーション</span>
+        <h2>旅行スタイル別の<br>予算の目安はこちら</h2>
+        <p>旅行スタイルに合わせて、3人グループでの旅行を試算しました。あなたの旅行スタイルに近いプランで試してみてください。</p>
+        <div class="style-cards">
+          <div class="style-card">
+            <img src="../assets/photos/photo_16.jpg" alt="バックパッカー">
+            <div>
+              <div class="sc-label">🎒 バックパッカー（3人・5日）</div>
+              <div class="sc-price">¥120,000〜</div>
+            </div>
+          </div>
+          <div class="style-card">
+            <img src="../assets/photos/photo_17.jpg" alt="標準旅行">
+            <div>
+              <div class="sc-label">🏨 標準旅行（3人・5日）</div>
+              <div class="sc-price">¥300,000〜</div>
+            </div>
+          </div>
+          <div class="style-card">
+            <img src="../assets/photos/photo_18.jpg" alt="ラグジュアリー">
+            <div>
+              <div class="sc-label">✨ ラグジュアリー（3人・5日）</div>
+              <div class="sc-price">¥600,000〜</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="budget-visual">
+        <div class="bv-title">🏝 3人・沖縄3泊4日の内訳例</div>
+        <div class="bv-bar">
+          <div class="bv-bar-head"><span>🚆 交通費</span><strong>¥120,000 (40%)</strong></div>
+          <div class="bv-bar-track"><div class="bv-bar-fill" style="width:40%;background:#3b82f6"></div></div>
+        </div>
+        <div class="bv-bar">
+          <div class="bv-bar-head"><span>🏨 宿泊費</span><strong>¥105,000 (35%)</strong></div>
+          <div class="bv-bar-track"><div class="bv-bar-fill" style="width:35%;background:#10b981"></div></div>
+        </div>
+        <div class="bv-bar">
+          <div class="bv-bar-head"><span>🍽️ 食費</span><strong>¥45,000 (15%)</strong></div>
+          <div class="bv-bar-track"><div class="bv-bar-fill" style="width:15%;background:#f59e0b"></div></div>
+        </div>
+        <div class="bv-bar">
+          <div class="bv-bar-head"><span>🎡 観光費</span><strong>¥30,000 (10%)</strong></div>
+          <div class="bv-bar-track"><div class="bv-bar-fill" style="width:10%;background:#ef4444"></div></div>
+        </div>
+        <div class="bv-total">
+          <span>合計</span>
+          <strong>¥300,000</strong>
+        </div>
+        <div class="bv-per">1人あたり ¥100,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="cmp-sec" id="comparison">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <span class="sec-tag">比較</span>
+      <h2 class="sec-title">他のサービスと比べて、ここが違う！</h2>
+      <p class="sec-sub">旅行予算詳細プランナーだけの強みをご覧ください。</p>
+    </div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th style="text-align:left;background:#f8fafc;color:#6b7280;font-size:12px;padding:16px 20px;">機能</th>
+            <th class="ours">旅行予算<br>詳細プランナー</th>
+            <th class="other">他サービスA</th>
+            <th class="other">他サービスB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>完全無料・登録不要</td>
+            <td class="ok">◎</td>
+            <td class="ng">×</td>
+            <td class="ng">×</td>
+          </tr>
+          <tr>
+            <td>グループ割り勘計算</td>
+            <td class="ok">◎</td>
+            <td class="ok2">△</td>
+            <td class="ng">×</td>
+          </tr>
+          <tr>
+            <td>複数通貨・為替対応</td>
+            <td class="ok">◎</td>
+            <td class="ng">×</td>
+            <td class="ng">×</td>
+          </tr>
+          <tr>
+            <td>複数プランの一括比較</td>
+            <td class="ok">◎</td>
+            <td class="ng">×</td>
+            <td class="ok2">△</td>
+          </tr>
+          <tr>
+            <td>SNSシェア機能</td>
+            <td class="ok">◎</td>
+            <td class="ng">×</td>
+            <td class="ng">×</td>
+          </tr>
+          <tr>
+            <td>CSV/印刷/コピー書き出し</td>
+            <td class="ok">◎</td>
+            <td class="ok2">△</td>
+            <td class="ng">×</td>
+          </tr>
+          <tr>
+            <td>モバイル完全対応</td>
+            <td class="ok">◎</td>
+            <td class="ok2">△</td>
+            <td class="ok2">△</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== USE CASES ===== -->
+<section class="uc-sec">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <span class="sec-tag">活用シーン</span>
+      <h2 class="sec-title">さまざまな旅行シーンで活躍します</h2>
+      <p class="sec-sub">どんな旅行スタイルにも対応。あなたの旅行計画をサポートします。</p>
+    </div>
+    <div class="uc-grid">
+      <div class="uc-card">
+        <img src="../assets/photos/photo_05.jpg" alt="カップル旅行">
+        <div class="uc-overlay"></div>
+        <div class="uc-tag">2人旅</div>
+        <div class="uc-label">カップル旅行</div>
+      </div>
+      <div class="uc-card">
+        <img src="../assets/photos/photo_06.jpg" alt="家族旅行">
+        <div class="uc-overlay"></div>
+        <div class="uc-tag">家族・子連れ</div>
+        <div class="uc-label">家族旅行</div>
+      </div>
+      <div class="uc-card">
+        <img src="../assets/photos/photo_20.jpg" alt="一人旅">
+        <div class="uc-overlay"></div>
+        <div class="uc-tag">ソロトラベル</div>
+        <div class="uc-label">一人旅</div>
+      </div>
+      <div class="uc-card">
+        <img src="../assets/photos/photo_21.jpg" alt="グループ旅行">
+        <div class="uc-overlay"></div>
+        <div class="uc-tag">友達・同僚</div>
+        <div class="uc-label">グループ旅行</div>
+      </div>
+    </div>
+    <div class="uc-gallery">
+      <img src="../assets/photos/photo_07.jpg" alt="旅行シーン">
+      <img src="../assets/photos/photo_08.jpg" alt="旅行シーン">
+      <img src="../assets/photos/photo_22.jpg" alt="旅行シーン">
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="tst-sec" id="testimonials">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <span class="sec-tag">ご利用者の声</span>
+      <h2 class="sec-title">旅行計画がラクになった！</h2>
+      <p class="sec-sub">実際にご利用いただいたユーザーの口コミです。</p>
+    </div>
+    <div class="tst-grid">
+      <div class="tst-card">
+        <div class="tst-stars">★★★★★</div>
+        <p class="tst-text">グループ旅行の幹事をやっているのですが、今まで手計算で大変でした。このツールのおかげで割り勘も一発で解決！みんなに感謝されました。来年もこれで計画します。</p>
+        <div class="tst-user">
+          <img class="tst-avatar" src="../assets/photos/photo_13.jpg" alt="">
+          <div>
+            <div class="tst-name">田中 K さん（30代・男性）</div>
+            <div class="tst-detail">グループ旅行 / 6名 / 北海道</div>
+          </div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-stars">★★★★★</div>
+        <p class="tst-text">海外旅行の予算を立てるのが難しかったのですが、通貨換算まで対応していて非常に便利です。ヨーロッパ旅行の計画が一気に立てられました！大満足です。</p>
+        <div class="tst-user">
+          <img class="tst-avatar" src="../assets/photos/photo_14.jpg" alt="">
+          <div>
+            <div class="tst-name">鈴木 M さん（20代・女性）</div>
+            <div class="tst-detail">カップル旅行 / 2名 / ヨーロッパ</div>
+          </div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-stars">★★★★★</div>
+        <p class="tst-text">複数パターンを比較できるのが最高です。節約プランと贅沢プランを並べて比較して、ちょうどいいプランを見つけることができました。家族旅行の計画に大活躍。</p>
+        <div class="tst-user">
+          <img class="tst-avatar" src="../assets/photos/photo_15.jpg" alt="">
+          <div>
+            <div class="tst-name">山田 Y さん（40代・女性）</div>
+            <div class="tst-detail">家族旅行 / 4名 / 沖縄</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AFFILIATE ===== -->
+<div style="background:#fff;border-top:1px solid #f3f4f6;padding:20px 24px;text-align:center">
+  <p style="font-size:11px;font-weight:600;color:#9ca3af;margin-bottom:12px;">スポンサーリンク</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:700px;margin:0 auto;">
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" rel="nofollow" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;font-size:13px;color:#9a3412;font-weight:700;text-decoration:none;">🏨 じゃらんnetで宿を検索</a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3WJ5+C2OQY2+14CS+68EPE" alt="">
+  </div>
+</div>
+
+<!-- ===== CTA ===== -->
+<section class="cta-sec">
+  <h2>旅行前に、まずは無料で予算チェック</h2>
+  <p>完全無料・登録不要でいつでもご利用いただけます。<br>旅行計画をもっとスマートに、もっと楽しく。</p>
+  <a href="../" class="cta-btn-main">今すぐ計算する →</a>
+  <p class="cta-trust">✅ 登録不要 ✅ 完全無料 ✅ データ保存なし ✅ 即時計算</p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="lp-footer">
+  <div class="lp-footer-inner">
+    <div class="lp-footer-top">
+      <div class="lp-footer-logo">✈️ 旅行予算詳細プランナー</div>
+      <div class="lp-footer-links">
+        <a href="../">計算ツールへ</a>
+        <a href="../privacy-policy.html">プライバシーポリシー</a>
+        <a href="../terms.html">利用規約</a>
+        <a href="../contact.html">お問い合わせ</a>
+        <a href="https://appadaycreator.com/">AppADayCreator</a>
+      </div>
+    </div>
+    <div class="lp-footer-bottom">
+      <p style="margin-bottom:6px;font-size:11px;">本サービスはアフィリエイト広告を掲載しています（A8.net）</p>
+      <p>© 2026 AppADayCreator. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
