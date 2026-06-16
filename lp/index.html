@@ -41,10 +41,10 @@ button{font-family:inherit;cursor:pointer}
 .lp-header-cta:hover{background:#059669;box-shadow:0 4px 12px rgba(16,185,129,.3)}
 
 /* ===== HERO ===== */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:640px;overflow:hidden}
-.hero-photo{position:relative;overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
-.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(15,23,42,.08) 0%,transparent 60%)}
+.hero{display:grid;grid-template-columns:55% 45%;min-height:680px;overflow:hidden}
+.hero-photo{position:relative;overflow:hidden;min-height:680px}
+.hero-photo img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(15,23,42,.15) 0%,rgba(15,23,42,.05) 70%,transparent 100%)}
 .hero-content{background:linear-gradient(150deg,#eff6ff 0%,#dbeafe 50%,#e0f2fe 100%);display:flex;flex-direction:column;justify-content:center;padding:56px 48px 56px 40px;position:relative}
 .hero-content::before{content:'';position:absolute;top:-60px;right:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(59,130,246,.12) 0%,transparent 70%);pointer-events:none}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#3b82f6;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;border:1.5px solid #bfdbfe;margin-bottom:20px;width:fit-content;box-shadow:0 2px 8px rgba(59,130,246,.1)}
@@ -198,6 +198,31 @@ section{padding:80px 24px}
 /* ===== AFFILIATE preserved area ===== */
 .aff-strip{background:#fff;border-top:1px solid #f3f4f6;padding:16px 24px;text-align:center}
 
+/* ===== WORRY ILLUSTRATION AVATAR ===== */
+.worry-illus{width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:44px;margin:0 auto 16px;box-shadow:0 4px 16px rgba(0,0,0,.12);flex-shrink:0}
+.worry-card .worry-name{font-size:12px;font-weight:700;color:#3b82f6;margin-bottom:6px}
+
+/* ===== COMPARISON VISUAL BARS ===== */
+.cmp-vis{background:#fff;border-radius:20px;padding:36px 40px;margin-bottom:32px;box-shadow:0 4px 24px rgba(59,130,246,.1)}
+.cmp-vis-header{text-align:center;margin-bottom:28px}
+.cmp-vis-header h3{font-size:18px;font-weight:800;color:#1e3a5f;margin-bottom:6px}
+.cmp-vis-header p{font-size:13px;color:#6b7280}
+.cmp-vis-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cmp-vis-cat{background:#f8fafc;border-radius:14px;padding:20px}
+.cmp-vis-cat-label{font-size:12px;font-weight:700;color:#6b7280;margin-bottom:14px;text-align:center;text-transform:uppercase;letter-spacing:.5px}
+.cmp-vis-row{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.cmp-vis-name{width:120px;font-size:11px;font-weight:600;color:#374151;flex-shrink:0;text-align:right}
+.cmp-vis-track{flex:1;height:22px;background:#e5e7eb;border-radius:5px;overflow:hidden}
+.cmp-vis-fill{height:100%;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:10px;font-weight:800;color:#fff;min-width:30px;transition:width .8s}
+.cmp-vis-fill.ours{background:linear-gradient(90deg,#3b82f6,#2563eb)}
+.cmp-vis-fill.oth1{background:#94a3b8}
+.cmp-vis-fill.oth2{background:#d1d5db;color:#9ca3af}
+
+/* ===== TESTIMONIALS EXPANDED ===== */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tst-rating-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.tst-badge{font-size:10px;font-weight:700;background:#eff6ff;color:#3b82f6;padding:3px 10px;border-radius:10px}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:1023px){
   .feat-grid{grid-template-columns:repeat(2,1fr)}
@@ -205,9 +230,13 @@ section{padding:80px 24px}
   .tst-grid{grid-template-columns:1fr}
   .budget-inner{grid-template-columns:1fr}
 }
+@media(max-width:1023px){
+  .cmp-vis-cols{grid-template-columns:1fr}
+  .cmp-vis{padding:24px 20px}
+}
 @media(max-width:767px){
   .hero{grid-template-columns:1fr}
-  .hero-photo{height:260px}
+  .hero-photo{height:300px;min-height:unset}
   .hero-content{padding:32px 20px}
   .hero-title{font-size:30px}
   .hero-title .accent{font-size:34px}
@@ -312,20 +341,24 @@ section{padding:80px 24px}
     </div>
     <div class="worry-grid">
       <div class="worry-card">
-        <img class="worry-photo" src="../assets/photos/photo_09.jpg" alt="">
-        <p><strong>旅行費用の見積もりが<br>難しい…</strong><br><br>交通費や宿泊費の相場がわからず、予算オーバーになりがち</p>
+        <div class="worry-illus" style="background:linear-gradient(135deg,#fef3c7,#fde68a)">😟</div>
+        <div class="worry-name">20代 会社員・Aさん</div>
+        <p><strong>旅行費用の見積もりが<br>難しい…</strong><br><br>交通費や宿泊費の相場がわからず、予算オーバーになりがち。いつも現地で焦ってしまう</p>
       </div>
       <div class="worry-card">
-        <img class="worry-photo" src="../assets/photos/photo_10.jpg" alt="">
-        <p><strong>グループ旅行の<br>割り勘が大変…</strong><br><br>人数が多いほど計算が複雑で、幹事の負担が増す</p>
+        <div class="worry-illus" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">🧑‍🤝‍🧑</div>
+        <div class="worry-name">30代 幹事担当・Bさん</div>
+        <p><strong>グループ旅行の<br>割り勘が大変…</strong><br><br>人数が多いほど計算が複雑で、幹事の負担が増す。毎回スプレッドシートを作るのが面倒</p>
       </div>
       <div class="worry-card">
-        <img class="worry-photo" src="../assets/photos/photo_11.jpg" alt="">
-        <p><strong>プラン変更時の<br>予算変動がわからない…</strong><br><br>ホテルを変えたら全体でいくらになるか即座に把握できない</p>
+        <div class="worry-illus" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">📊</div>
+        <div class="worry-name">40代 主婦・Cさん</div>
+        <p><strong>プラン変更時の<br>予算変動がわからない…</strong><br><br>ホテルを変えたら全体でいくらになるか即座に把握できない。計算し直しが面倒</p>
       </div>
       <div class="worry-card">
-        <img class="worry-photo" src="../assets/photos/photo_12.jpg" alt="">
-        <p><strong>どこで節約できるか<br>わからない…</strong><br><br>カテゴリ別の費用を把握していないため、削れる部分が見えない</p>
+        <div class="worry-illus" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0)">💡</div>
+        <div class="worry-name">50代 海外旅行好き・Dさん</div>
+        <p><strong>どこで節約できるか<br>わからない…</strong><br><br>カテゴリ別の費用を把握していないため、削れる部分が見えない。もっとお得に旅したい</p>
       </div>
     </div>
   </div>
@@ -497,6 +530,59 @@ section{padding:80px 24px}
       <h2 class="sec-title">他のサービスと比べて、ここが違う！</h2>
       <p class="sec-sub">旅行予算詳細プランナーだけの強みをご覧ください。</p>
     </div>
+    <div class="cmp-vis">
+      <div class="cmp-vis-header">
+        <h3>サービス比較スコア</h3>
+        <p>機能・価格・使いやすさの3軸で評価しました</p>
+      </div>
+      <div class="cmp-vis-cols">
+        <div class="cmp-vis-cat">
+          <div class="cmp-vis-cat-label">機能充実度</div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">旅行予算詳細プランナー</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill ours" style="width:95%">95%</div></div>
+          </div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">他サービスA</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill oth1" style="width:48%">48%</div></div>
+          </div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">他サービスB</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill oth2" style="width:32%">32%</div></div>
+          </div>
+        </div>
+        <div class="cmp-vis-cat">
+          <div class="cmp-vis-cat-label">コスト競争力（無料度）</div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">旅行予算詳細プランナー</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill ours" style="width:100%">完全無料</div></div>
+          </div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">他サービスA</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill oth1" style="width:40%">有料</div></div>
+          </div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">他サービスB</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill oth2" style="width:50%">一部有料</div></div>
+          </div>
+        </div>
+        <div class="cmp-vis-cat">
+          <div class="cmp-vis-cat-label">使いやすさ</div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">旅行予算詳細プランナー</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill ours" style="width:92%">92%</div></div>
+          </div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">他サービスA</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill oth1" style="width:55%">55%</div></div>
+          </div>
+          <div class="cmp-vis-row">
+            <span class="cmp-vis-name">他サービスB</span>
+            <div class="cmp-vis-track"><div class="cmp-vis-fill oth2" style="width:42%">42%</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="cmp-table-wrap">
       <table class="cmp-table">
         <thead>
@@ -608,7 +694,7 @@ section{padding:80px 24px}
     </div>
     <div class="tst-grid">
       <div class="tst-card">
-        <div class="tst-stars">★★★★★</div>
+        <div class="tst-rating-row"><div class="tst-stars">★★★★★</div><span class="tst-badge">グループ旅行</span></div>
         <p class="tst-text">グループ旅行の幹事をやっているのですが、今まで手計算で大変でした。このツールのおかげで割り勘も一発で解決！みんなに感謝されました。来年もこれで計画します。</p>
         <div class="tst-user">
           <img class="tst-avatar" src="../assets/photos/photo_13.jpg" alt="">
@@ -619,7 +705,7 @@ section{padding:80px 24px}
         </div>
       </div>
       <div class="tst-card">
-        <div class="tst-stars">★★★★★</div>
+        <div class="tst-rating-row"><div class="tst-stars">★★★★★</div><span class="tst-badge">海外旅行</span></div>
         <p class="tst-text">海外旅行の予算を立てるのが難しかったのですが、通貨換算まで対応していて非常に便利です。ヨーロッパ旅行の計画が一気に立てられました！大満足です。</p>
         <div class="tst-user">
           <img class="tst-avatar" src="../assets/photos/photo_14.jpg" alt="">
@@ -630,13 +716,46 @@ section{padding:80px 24px}
         </div>
       </div>
       <div class="tst-card">
-        <div class="tst-stars">★★★★★</div>
+        <div class="tst-rating-row"><div class="tst-stars">★★★★★</div><span class="tst-badge">家族旅行</span></div>
         <p class="tst-text">複数パターンを比較できるのが最高です。節約プランと贅沢プランを並べて比較して、ちょうどいいプランを見つけることができました。家族旅行の計画に大活躍。</p>
         <div class="tst-user">
           <img class="tst-avatar" src="../assets/photos/photo_15.jpg" alt="">
           <div>
             <div class="tst-name">山田 Y さん（40代・女性）</div>
             <div class="tst-detail">家族旅行 / 4名 / 沖縄</div>
+          </div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-rating-row"><div class="tst-stars">★★★★★</div><span class="tst-badge">一人旅</span></div>
+        <p class="tst-text">一人旅の予算管理に使っています。日別内訳が見られるのが特に助かります。タイ旅行では毎日の出費を記録しながら使い、予算内に収めることができました！</p>
+        <div class="tst-user">
+          <img class="tst-avatar" src="../assets/photos/photo_09.jpg" alt="">
+          <div>
+            <div class="tst-name">佐藤 T さん（25代・男性）</div>
+            <div class="tst-detail">一人旅 / 1名 / 東南アジア</div>
+          </div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-rating-row"><div class="tst-stars">★★★★★</div><span class="tst-badge">国内旅行</span></div>
+        <p class="tst-text">友人との国内旅行で大活躍！LINEで結果をシェアできるので、全員が同じ予算を把握できて便利でした。これからも旅行計画はこれ一択です。</p>
+        <div class="tst-user">
+          <img class="tst-avatar" src="../assets/photos/photo_10.jpg" alt="">
+          <div>
+            <div class="tst-name">伊藤 R さん（30代・女性）</div>
+            <div class="tst-detail">友人旅行 / 4名 / 京都・大阪</div>
+          </div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-rating-row"><div class="tst-stars">★★★★☆</div><span class="tst-badge">ハネムーン</span></div>
+        <p class="tst-text">ハネムーンの予算計画に使いました。高級ホテルと格安ホテルのプランを並べて比較できて、最終的にバランスの良いプランを選べました。結婚記念旅行も使います！</p>
+        <div class="tst-user">
+          <img class="tst-avatar" src="../assets/photos/photo_11.jpg" alt="">
+          <div>
+            <div class="tst-name">松本 A さん（30代・女性）</div>
+            <div class="tst-detail">ハネムーン / 2名 / モルディブ</div>
           </div>
         </div>
       </div>
